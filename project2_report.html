@@ -148,26 +148,32 @@
         Persuasive or Deceptive Visualization?
       </h1>
 
-      <p><strong>Your Name</strong> — <em>Your UCSD Email Address</em></p>
+      <p><strong>Jacob Lasam</strong> — <em>jnlasam@ucsd.edu</em></p>
     </header>
 
     <main>
-      <h2>Proposition: [STATE PROPOSITION]</h2>
+      <h2>Proposition: Some precincts are significantly worse that others historically.</h2>
 
       <section>
         <h3>FOR the Proposition</h3>
 
         <figure>
-          <img src="IMAGE_FILENAME" alt="" />
-          <figcaption>BRIEF CAPTION HERE.</figcaption>
+          <img src="./images/precinct_sum" alt="" />
+          <figcaption>Sum of Precinct Complaints</figcaption>
         </figure>
 
         <p>Design Decisions and Rationale:</p>
 
         <ul>
-          <li>RATIONALE_1</li>
-          <li>RATIONALE_2</li>
-          <li>RATIONALE_3</li>
+          <li>Decision to bin the data - -1
+It really depends on how you bin the data, but in this case, because I put over 1250, it could realistically be anything. It downplays how many complaints were in that area.
+</li>
+          <li>The way the data was presented on the map - -2
+Since this is a sum of all complaints made to the precinct over the course of 35 years, it removes all historical context of these complaints. It also makes certain areas of New York look like they might be worse than they actually are.
+</li>
+          <li>Title - 2
+Although this is a fundamentally dishonest graph, the title is exactly what the graph represents.
+</li>
         </ul>
       </section>
 
@@ -175,23 +181,32 @@
         <h3>AGAINST the Proposition</h3>
 
         <figure>
-          <img src="IMAGE_FILENAME" alt="" />
-          <figcaption>BRIEF CAPTION HERE.</figcaption>
+          <img src="./images/precinct_percent" alt="" />
+          <figcaption>% of Precinct Complaints That Were Substantiated</figcaption>
         </figure>
 
         <p>Design Decisions and Rationale:</p>
 
         <ul>
-          <li>RATIONALE_1</li>
-          <li>RATIONALE_2</li>
-          <li>RATIONALE_3</li>
+          <li>The way the data was presented - 1
+Because the graph is binned by percentages instead of it just being a sum, it gets over the sheer number of complaints that some districts have. Although some areas get less complaints than others, sometimes the area with less complaints has them substantiated more often.
+</li>
+          <li>The way the data binned - 1
+The way the data was binned is honest within this graph, because it is not obscuring any parts of the data.
+</li>
+          <li>Color scheme - 2
+The darker areas are worse, and typically on choropleth graphs on a sequential scale, darker areas tend to be higher in the chosen statistic.
+</li>
         </ul>
       </section>
 
       <section>
         <h2>Final Reflection</h2>
 
-        <p>[WRITE FINAL REFLECTION PARAGRAPHS HERE.]</p>
+        <p>This project was interesting for me because when I saw the police precinct complaint dataset and I explored it, an immediate idea for two graphs formed in my head. As such, I sort of ignored the proposition part of the assignment and immediately began to work on my idea. My vision was that I wanted to paint some precinct as being worse than others, and the percentages disprove that assumption. Lucky for me, a geojson file of NYPD precincts existed on the internet. It surprised me that all these things that I learned came together in such a way that it enabled me to make a cool choropleth map like this!
+
+	The thing that makes a piece of data analysis or presentation ethical is whether or not it shows the full story within the data by mitigating bias. What I mean by this is that context is not ignored to skew a story a certain way. For example, my choropleth map based on the sum of police complaints ignores the fact that the complaints might be unsubstantiated/the cop being exonerated. By having some precincts as receiving more complaints than others, it paints those precincts as worse by the metric of receiving more complaints. Although I think my percentage graph does a better job at being honest, I think it is still missing context. For a future project, I want to have a choropleth map of NYPD precinct districts, and make it interactive with a year slider. And whenever a year with unusually high police complaints appears, I can put that into context with local news coverage from the day.
+</p>
       </section>
     </main>
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"c822b88e119346678db149ed7b7721c9","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
